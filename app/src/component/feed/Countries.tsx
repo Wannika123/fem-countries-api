@@ -1,7 +1,7 @@
 import styles from './Countries.module.css'
 import { formatQuery } from "@/utils/formatString"
 import { fetchData } from "@/utils/fetchData"
-import { Suspense, useMemo } from "react"
+import { Suspense } from "react"
 import InfiniteScrollCountries from "./InfiniteScrollCountries"
 
 export type RegionType = 'africa' | 'america' | 'antarctic' | 'asia' | 'europe' | 'oceania'
