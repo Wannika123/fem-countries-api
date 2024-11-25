@@ -32,7 +32,7 @@ export default async function Countries({ query = undefined }: CountriesProps) {
 
     let queryStr = '';
 
-    const regionsArr: string[] = useMemo(() => REGIONS, [])  // avoid TS error in if check
+    const regionsArr: string[] = REGIONS  // avoid TS error in if check
 
     if (!query) {
         queryStr = 'all'

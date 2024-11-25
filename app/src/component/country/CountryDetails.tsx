@@ -71,7 +71,7 @@ export default function CountryDetails({ name, isModal }: CountryDetailProps) {
                 setLoading(false);
                 setError(err.message);
             })
-    }, [])   
+    }, [detailsUrl])   
     
     return (
         <>

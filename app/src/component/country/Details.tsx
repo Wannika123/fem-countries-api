@@ -19,12 +19,6 @@ type DetailsProps = {
     isModal: boolean
 }
 
-type CurrenciesType = {
-    [key: string]: {
-        name: string
-    }
-}
-
 export default function Details({ data, isModal }: DetailsProps) {
     
     const [bordersData, setBordersData] = useState<BordersType[] | null>(null)
@@ -39,7 +33,7 @@ export default function Details({ data, isModal }: DetailsProps) {
         router.push(`/country/${query}`)
     }
     
-    let currenciesArr = [];
+    const currenciesArr = [];
 
     let key: string;
     for (key in data.currencies) {
@@ -58,7 +52,7 @@ export default function Details({ data, isModal }: DetailsProps) {
             })
             .then(data => setBordersData(data))
             .catch(e => console.log(e.message))        
-    }, [])
+    }, [data.borders])
 
     return (
         <div className={styles.container}>
