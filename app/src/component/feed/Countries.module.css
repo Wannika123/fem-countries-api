@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: minmax(100%, 16.5rem);
+    justify-items: center;
+    justify-content: center;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+@media (min-width: 50rem) {
+    .container {
+        grid-template-columns: repeat(2, 16.5rem);
+    }
+}
+
+@media (min-width: 81.25rem) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 74px;
+    }
+}

@@ -1,0 +1,23 @@
+.container {
+    position: relative;
+}
+
+.container:has(input:focus-visible) {
+    outline: 2px solid blue;
+}
+
+.container input {
+    opacity: 0;
+    position: absolute;
+}
+
+.container label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.container svg path {
+    fill: var(--text);
+}

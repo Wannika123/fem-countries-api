@@ -1,0 +1,110 @@
+.grid-container {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+.img-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.text-container {
+    font-size: 0.875rem;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+.text-container h2 {
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+}
+
+.description-wrapper {
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.border-wrapper {
+    margin-top: 34px;
+}
+
+.border-wrapper h3 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    width: fit-content;
+}
+
+.border-wrapper .border-btns-container {
+    display: flex;
+    justify-items: stretch;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.border-btns-container button {
+    border: none;
+    background-color: var(--secondary-bg);
+    color: var(--text);
+    font-size: 0.875rem;
+    font-weight: 300;
+    min-width: 6rem;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+@media (min-width: 81.25rem) {
+    .container {
+        container-type: inline-size;
+    }
+    .grid-container {
+        grid-template-columns: 1fr 47%;
+        justify-items: stretch;
+        gap: 120px;
+        align-items: center;
+    }
+    @container (max-width: 62.5rem) {
+        .grid-container {
+            grid-template-columns: 1fr 50%;
+            gap: 80px;
+        }
+    }
+    .img-container img {
+        max-width: unset;
+    }
+    .text-container {
+        font-size: 1rem;
+        max-width: unset;
+    }
+    .text-container h2 {
+        font-size: 2rem;
+    }
+    .description-wrapper {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .description-wrapper > div {
+        width: 45%;  
+    }
+    .border-wrapper {
+        margin-top: 68px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    .border-wrapper h3 {
+        margin-right: 16px;
+        margin-bottom: 0;
+        display: inline-block;
+        width: fit-content;
+    }
+}

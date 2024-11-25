@@ -1,0 +1,94 @@
+.light {
+  --main-bg: #fafafa;
+  --secondary-bg: #fff;
+  --text: #111517;
+  --placeholder: #848484;
+}
+
+.dark {
+  --main-bg: #202c36;
+  --secondary-bg: #2b3844;
+  --text: #fff;
+  --placeholder: #fff;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-nunito-sans);
+  background-color: var(--main-bg);
+  color: var(--text);
+  margin-bottom: 40px;
+}
+
+header, main {
+  width: 100%;
+}
+
+.center {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+dialog {
+  width: 80%;
+  max-width: 1000px;
+  border: none;
+  background-color: var(--main-bg);
+  color: var(--text);
+  border-radius: 8px;
+}
+
+dialog::backdrop {
+  background-color: #00000080;
+}
+
+dialog > div {
+  position: relative;
+  padding: 40px;
+}
+
+.full-screen-btn,
+.close-btn {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.full-screen-btn {
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.full-screen-btn svg g {
+  fill: var(--text);
+}
+
+.close-btn {
+  font-size: 40px;
+  top: 10px;
+  right: 10px;
+}
+
+.close-btn:hover,
+.full-screen-btn:hover {
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}

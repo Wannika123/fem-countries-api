@@ -1,0 +1,29 @@
+.container {
+    background-color: var(--secondary-bg);
+    color: var(--text);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 16.5rem;
+    max-height: 21rem;
+}
+
+.text-container {
+    padding: 24px 24px 46px 24px;
+    font-size: 0.875rem;
+}
+
+.text-container h2 {
+    font-weight: 800;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.text-container p {
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    line-height: 1rem;
+}
+
+.semi-bold {
+    font-weight: 600;
+}

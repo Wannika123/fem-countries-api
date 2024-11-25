@@ -1,0 +1,51 @@
+.container {
+    margin: 24px 0 32px 0;
+    cursor: pointer;
+}
+
+.container form {
+    margin-bottom: 40px;
+}
+
+.input-container {
+    position: relative;
+    color: var(--placeholder);  /* For the color of search icon */
+}
+
+.input-container input {
+    width: 100%;
+    max-width: 30rem;
+    padding: 14px;
+    padding-left: 74px;
+    color: var(--text);
+    background-color: var(--secondary-bg);
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-container input::placeholder {
+    color: var(--placeholder);
+}
+
+.input-container svg {
+    position: absolute;
+    top: 19px;
+    left: 32px;
+}
+
+@media (min-width: 81.25rem) {
+    .container {
+        margin: 48px 0;
+        display: flex;
+        justify-content: space-between;
+    }  
+    .container form {
+        margin-bottom: 0;
+    }  
+    .input-container input {
+        padding: 18px;
+        padding-left: 74px;
+        width: 30rem;
+    }
+}
